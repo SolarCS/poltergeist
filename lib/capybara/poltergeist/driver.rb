@@ -174,7 +174,9 @@ module Capybara::Poltergeist
     end
 
     def reset!
-      browser.reset
+      if @browser
+        browser.reset
+      end
       @started = false
     end
 
